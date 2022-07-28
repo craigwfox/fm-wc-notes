@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Web Components - Frontend Masters</title>
+  <link rel="stylesheet" href="https://craigwfox.com/css/styles.css">
+
+  <style>
+    .main {
+      padding: 2rem;
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <script src="https://unpkg.com/two-up-element@1"></script>
+
+  <header class="site-header">
+    <nav aria-label="Site navigation">
+      <a href="index.html" aria-current="page">Using others</a>
+      <a href="">About</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2>Details</h2>
+    <details-utils close-click-outside close-esc animate>
+      <details id="pizza-details">
+        <summary> Pizza pockets</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione porro tempora beatae, quisquam dolore neque?</p>
+      </details>
+    </details-utils>
+    <script src="https://cdn.skypack.dev/@zachleat/details-utils" type="module"></script>
+    <p><a href="https://github.com/zachleat/details-utils" rel="noopener" target="_blank">Details utils</a> by Zach Leatherman</p>
+
+    <h2>Two Up</h2>
+    <style>
+      two-up {
+        width: 40rem;
+
+        flex: 1;
+      }
+
+      two-up>div {
+        display: flex;
+      }
+
+      two-up img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      two-up .dark img {
+        opacity: .2;
+      }
+    </style>
+    <two-up orientation="horizontal">
+      <div class="light">
+        <img src="https://craigwfox.com/img/cR2gVnS27p-600.avif" alt="">
+      </div>
+      <div class="dark">
+        <img src="https://craigwfox.com/img/cR2gVnS27p-600.avif" alt="">
+      </div>
+    </two-up>
+    <p><a href="https://github.com/GoogleChromeLabs/two-up" rel="noopener" target="_blank">Two up</a> by GoogleChromeLabs</p>
+  </main>
+
+</body>
+
+</html>
